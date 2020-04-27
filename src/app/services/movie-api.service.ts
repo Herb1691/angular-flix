@@ -12,6 +12,6 @@ export class MovieApiService {
   constructor(private httpClient: HttpClient) { }
 
   get(query: string): any {
-    return this.httpClient.get<any>('${this.MOVIE_URL}/?api_key=${this.API_KEY}&query=${query}').toPromise();
+    return this.httpClient.get<any>(`${this.MOVIE_URL}/?api_key=${this.API_KEY}&query=${query}`).toPromise();
   }
 }

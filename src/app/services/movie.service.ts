@@ -7,8 +7,8 @@ import { MovieApiService } from './movie-api.service';
 })
 export class MovieService {
 
-  searchResults: Array<any>;
-  myMovieList: Array<any>;
+  searchResults: Array<any> = [];
+  myMovieList: Array<any> = [];
 
   constructor(private apiService: ApiService, private movieApiService: MovieApiService) { }
 
