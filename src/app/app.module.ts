@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LogoComponent } from './logo/logo.component';
@@ -12,6 +12,7 @@ import { ItemComponent } from './item/item.component';
 import { ListToggleComponent } from './list-toggle/list-toggle.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
