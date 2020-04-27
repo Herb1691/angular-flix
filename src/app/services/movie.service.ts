@@ -25,4 +25,15 @@ export class MovieService {
     this.searchResults.length = 0;
     this.searchResults.push(...response.results);
   }
+
+  async loadMovieList() {
+    const results = await this.apiService.get();
+    this.myMovieList.length = 0;
+    this.myMovieList.push(...results);
+  }
+
+  async saveToList(movie: any) {
+    this.apiService.post(movie);
+    this.loadMovieList();
+  }
 }
